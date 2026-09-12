@@ -132,7 +132,7 @@ https://www.youtube.com/watch?v=mnBU_yAJPBw
 *A walkthrough of the reversed games*
 
 # Additional Demos
-[Add any extra demo materials/links]
+None
 
 ## Team Contributions
 - Karthik C K: ui/ux and implementation
