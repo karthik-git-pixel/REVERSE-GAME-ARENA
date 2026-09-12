@@ -60,27 +60,13 @@ export class SnakeEngine implements Engine {
 
   private placeApples() {
     const head = this.snake[0];
-    const numApples = 4;
+    const numApples = 8;
     while (this.activeApples.length < numApples) {
-      const appleIndex = this.activeApples.length;
       let placed = false;
-      const isRight = appleIndex % 2 === 1;
-      const isBottom = appleIndex >= 2;
-      
-      const minX = isRight ? Math.floor(COLS / 2) : 1;
-      const maxX = isRight ? COLS - 2 : Math.floor(COLS / 2) - 1;
-      const minY = isBottom ? Math.floor(ROWS / 2) : 1;
-      const maxY = isBottom ? ROWS - 2 : Math.floor(ROWS / 2) - 1;
 
       for (let i = 0; i < 400; i++) {
-        let x, y;
-        if (i < 50) {
-          x = isRight ? randInt(COLS - 3, COLS - 2) : randInt(1, 2);
-          y = isBottom ? randInt(ROWS - 3, ROWS - 2) : randInt(1, 2);
-        } else {
-          x = randInt(minX, maxX);
-          y = randInt(minY, maxY);
-        }
+        const x = randInt(1, COLS - 2);
+        const y = randInt(1, ROWS - 2);
 
         if (!this.blocked(x, y) && !this.activeApples.some(a => a.x === x && a.y === y) && Math.abs(x - head.x) + Math.abs(y - head.y) > 3) {
           this.activeApples.push({ x, y });
