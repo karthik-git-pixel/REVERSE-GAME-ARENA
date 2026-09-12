@@ -67,12 +67,5 @@ export const GAMES: GameDef[] = [
   },
 ];
 
-export const COMING_SOON = [
-  { emoji: '🚗', title: 'REVERSE RACING', hint: 'Steer the road, not the car.' },
-  { emoji: '🏓', title: 'REVERSE PONG', hint: 'Move the goal, not the paddle.' },
-  { emoji: '🧱', title: 'REVERSE TETRIS', hint: 'Rotate the well, not the piece.' },
-  { emoji: '🏀', title: 'REVERSE BASKETBALL', hint: 'Move the hoop to the ball.' },
-  { emoji: '🏃', title: 'REVERSE RUNNER', hint: 'Drop obstacles. The runner dodges.' },
-];
 
 export const getGame = (id: string) => GAMES.find((g) => g.id === id) ?? GAMES[0];

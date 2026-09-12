@@ -3,11 +3,11 @@
 # Reverse Game Arena 🎯
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: LUNA
 
 ### Team Members
-- Team Lead: Karthik C K - [College]
-- Member 2: Megha Suresh - [College]
+- Team Lead: Karthik C K - COCHIN UNIVERSITY OF SCIENCE AND TECHNOLOGY
+- Member 2: Megha Suresh - COCHIN UNIVERSITY OF SCIENCE AND TECHNOLOGY
 
 ### Project Description
 A browser arcade of familiar games with their core rule flipped. Built with React, TypeScript, Vite and HTML5 Canvas. There are no game engines, no audio files and no runtime dependencies besides React.
@@ -79,8 +79,8 @@ None
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- Karthik C K: Game engines and logic
-- Megha Suresh: UI and components
+- Karthik C K: ui/ux and implementation
+- Megha Suresh: Planning and logic
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 

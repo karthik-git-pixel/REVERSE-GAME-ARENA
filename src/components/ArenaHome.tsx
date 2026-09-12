@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { CSSProperties } from 'react';
-import { COMING_SOON, GAMES } from '../games/registry';
+import { GAMES } from '../games/registry';
 import { getBest } from '../utils/storage';
 import { sfx } from '../audio/audioManager';
 import { reducedMotion } from '../utils/fx';
@@ -96,17 +96,6 @@ export default function ArenaHome({ onPlay, returning }: Props) {
           ))}
         </div>
 
-        <h3 className="section-title small">COMING SOON</h3>
-        <div className="soon-grid">
-          {COMING_SOON.map((s) => (
-            <div className="soon" key={s.title}>
-              <span className="soon-emoji" aria-hidden="true">{s.emoji}</span>
-              <strong>{s.title}</strong>
-              <small>{s.hint}</small>
-              <em>🔒 LOCKED</em>
-            </div>
-          ))}
-        </div>
       </section>
 
       <footer className="foot">REVERSE GAME ARENA · P PAUSE · R RESTART · ESC EXIT</footer>
