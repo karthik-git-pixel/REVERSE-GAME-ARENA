@@ -47,18 +47,74 @@ npm run dev
 ### Project Documentation
 For Software:
 
-# Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
+# Screenshots
+![Arena Home](./assets/r1.png)
+*Reverse Game Arena - Choose your game*
+
+![Reverse Snake](./assets/r2.png)
 *Reverse Snake - Eat apples and shrink*
 
-![Screenshot2](Add screenshot 2 here with proper name)
+![Reverse Flappy](./assets/r3.png)
 *Reverse Flappy - You move the pipe gap*
 
-![Screenshot3](Add screenshot 3 here with proper name)
+![Reverse Maze](./assets/r4.png)
 *Reverse Maze - You move the maze*
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
+```text
+                  ┌──────────────────────┐
+                  │       PLAYER         │
+                  │  Mobile / Desktop    │
+                  └──────────┬───────────┘
+                             │
+                     User Interaction
+                             │
+                             ▼
+              ┌────────────────────────────┐
+              │      GAME INTERFACE        │
+              │                            │
+              │  Lobby • HUD • Controls    │
+              └────────────┬───────────────┘
+                           │
+                           ▼
+              ┌────────────────────────────┐
+              │      REVERSE ENGINE        │
+              │                            │
+              │  Input → Game Logic        │
+              │        ↓                   │
+              │  Reverse Mechanics         │
+              │        ↓                   │
+              │  Collision / Physics       │
+              └────────────┬───────────────┘
+                           │
+             ┌─────────────┼─────────────┐
+             ▼             ▼             ▼
+        ┌─────────┐   ┌─────────┐   ┌─────────┐
+        │ Reverse │   │ Reverse │   │ Reverse │
+        │  Snake  │   │  Flappy │   │  Game N │
+        └────┬────┘   └────┬────┘   └────┬────┘
+             │             │             │
+             └─────────────┼─────────────┘
+                           ▼
+                 ┌───────────────────┐
+                 │   GAME STATE      │
+                 │ Score • Level     │
+                 │ Lives • Progress  │
+                 └─────────┬─────────┘
+                           │
+                           ▼
+                 ┌───────────────────┐
+                 │    LOCAL DATA     │
+                 │  High Scores etc. │
+                 └───────────────────┘
+
+                           ▲
+                           │
+                 ┌─────────┴─────────┐
+                 │      VERCEL       │
+                 │   Web Deployment  │
+                 └───────────────────┘
+```
 *GameShell manages the arena cards, loading transition, HUD, pause and game-over screens, high scores and input handling. Per-frame game state lives inside the engines, not in React.*
 
 For Hardware:
