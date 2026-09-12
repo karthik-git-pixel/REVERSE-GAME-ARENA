@@ -128,7 +128,7 @@ None
 
 ### Project Demo
 # Video
-[Add your demo video link here]
+https://www.youtube.com/watch?v=mnBU_yAJPBw
 *A walkthrough of the reversed games*
 
 # Additional Demos
